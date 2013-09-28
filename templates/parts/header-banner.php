@@ -1,0 +1,95 @@
+<?php 
+/**
+ * Infinity Theme: Header Content
+ *
+ * This template contains the Header Content. Fork this in your Child THeme
+ * if you want to change the markup but don't want to mess around doctypes/meta etc!
+ *
+ * @author Bowe Frankema <bowe@presscrew.com>
+ * @link http://infinity.presscrew.com/
+ * @copyright Copyright (C) 2010-2011 Bowe Frankema
+ * @license http://www.gnu.org/licenses/gpl.html GPLv2 or later
+ * @package Infinity
+ * @subpackage templates
+ * @since 1.0
+ */
+?>
+<div class="top-wrap row <?php do_action( 'top_wrap_class' ); ?>">
+	<?php
+		// Load Top Menu only if it's enabled
+		if ( current_theme_supports( 'infinity-top-menu-setup' ) ) :
+		infinity_get_template_part( 'templates/parts/top-menu', 'header' );
+		endif;
+	?>
+	<!-- header -->
+	<header id="header" role="banner">
+		<?php do_action( 'bp_before_header' ); ?>
+		<div id="logo-menu-wrap">
+			<?php
+				do_action( 'open_header' );
+				if ( !infinity_feature( 'infinity-header-logo' ) ):
+			?>
+			<?php
+				$heading_tag = ( is_home() || is_front_page() ) ? 'h1' : 'div';
+			?>
+			<<?php echo $heading_tag; ?> id="site-title">
+				<a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>"><?php bloginfo('name'); ?></a>
+				<span id="site-description"><?php bloginfo('description'); ?></span>
+			</<?php echo $heading_tag; ?>>
+			<?php
+				endif;
+				// Load Main Menu only if it's enabled
+				if ( current_theme_supports( 'infinity-main-menu-setup' ) ) :
+				infinity_get_template_part( 'templates/parts/main-menu', 'header' );
+				endif;
+				do_action( 'close_header' );
+			?>
+		</div>
+		<div id="wp-fb-login-widget">
+			<?php
+			
+			// only on server
+			if ( $_SERVER['HTTP_HOST'] == 'dev.wpa-play.com' ) {
+			
+				// target AutoConnect Premium
+				$widget = 'Widget_AutoConnect_Premium';
+			
+				// set up instance
+				$instance = array( 
+					"title" => "",
+					"labelUserName" => "Username",
+					"labelPass" => "Password",
+					"labelBtn" => "Login", 
+					"labelRemember" => "Remember me",
+					"labelForgot" => "Forgot?",
+					"labelLogout" => "Logout",
+					"labelProfile" => "Edit Profile",
+					"labelWelcome" => "Welcome,",
+					"showwplogin" => true,
+					"showrememberme" => false,
+					"showregister" => true,
+					"logoutofFB" => false,
+					"showavatar" => false,
+					"showEditProfile" => true,
+					"bpProfileLink" => true,
+					"avatarsize" => 35
+				);
+			
+				// args?
+				$args = array();
+			
+				// show widget
+				the_widget( $widget, $instance, $args );
+			
+			}
+			
+			?>
+		</div>
+	</header><!-- end header -->
+	<?php
+		// Load Sub Menu only if it's enabled
+		if ( current_theme_supports( 'infinity-sub-menu-setup' ) ) :
+			infinity_get_template_part( 'templates/parts/sub-menu', 'header' );
+		endif;
+	?>
+</div><!-- end top wrap -->
