@@ -47,16 +47,23 @@ body {
 	border-top: none;
 	font: 90%/140% "MuseoSans300", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 }
-h2.page-title a,h2.post-title a,h1.page-title a,h1.post-title a {
-	color: #545454;
-	margin-top: 0;
+h2.page-title,
+h2.post-title,
+h1.page-title,
+h1.post-title, 
+h2.page-title a,
+h2.post-title a,
+h1.page-title a,
+h1.post-title a 
+{
+	font-family: "MuseoSlab500", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
 }
 h2.page-title,h2.post-title,h1.page-title,h1.post-title {
-	color: #545454;
+	color: #82194e;
 	margin-top: 0;
 }
 a {
-	color: #4183C4;
+	color: #82194e;
 	text-decoration: none;
 	-webkit-transition: color 0.1s linear;
 	-moz-transition: color 0.1s linear;
@@ -188,6 +195,10 @@ h1#site-title,div#site-title {
 	border-bottom: 1px solid #3E3C3C;
 	color: #FFF;
 }
+#footer a {
+	color: #FFF;
+	text-decoration: underline;
+}
 #content .homepage-widget {
 	width: 33%;
 }
@@ -293,7 +304,7 @@ span.activity {
 	border-bottom: 1px solid #DDDDDD;
 }
 .bp-user #item-buttons .generic-button a:hover,#profile-nav-menu a:hover {
-	color: #4183C4;
+	color: #82194e;
 }
 .bp-user #item-buttons .generic-button a {
 	font-size: 120%;
@@ -521,21 +532,48 @@ body#infinity-base.registration .icext-feature.icext-bp-fb-autoconnect
 	right: 40px;
 }
 
+
+
 /* header login widget */
+#bp-sliding-login-panel .content a
+{
+	color: #b7c73b;
+}
+
+#bp-sliding-login-panel .content a
+{
+	color: #b7c73b;
+}
+
+#bp-sliding-login-panel .content a:hover
+{
+	text-decoration: underline;
+}
+
+.bp-sliding-login-tab ul.bp-sliding-login-login li a:hover
+{
+	text-decoration: none;
+}
+
+#bp-sliding-login-panel .content .bp-sliding-login-left.bsl-login-form
+{
+	width: 240px;
+}
+
+#bp-sliding-login-panel .content .bp-sliding-login-left.bsl-register
+{
+	width: 200px;
+}
+
 #wp-fb-login-widget
 {
-	float: right;
 	width: 240px;
-	margin-top: -20px;
 	color: #fff;
 	position: relative;
 }
 
 #wp-fb-login-widget h2.widgettitle
 {
-	font-size: 1.2em;
-	margin-bottom: 0;
-	text-align: right;
 }
 
 .logged-in #wp-fb-login-widget
@@ -562,6 +600,7 @@ body#infinity-base.registration .icext-feature.icext-bp-fb-autoconnect
 #wp-fb-login-widget .widget_autoconnect_premium label
 {
 	width: 6.75em;
+	padding-top: 5px;
 }
 
 #wp-fb-login-widget .widget_autoconnect_premium form#loginform
@@ -569,6 +608,123 @@ body#infinity-base.registration .icext-feature.icext-bp-fb-autoconnect
 	line-height: 3;
 	margin-top: 12px;
 }
+
+#wp-fb-login-widget .fbLoginButton
+{
+	top: 15px;
+}
+
+#bp-sliding-login-panel.bsl-anon .content
+{
+	width: 954px;
+}
+
+/* responsiveness tweaks */
+@media all and (max-width: 980px) {
+	
+	#bp-sliding-login-panel.bsl-anon .content
+	{
+		width: 675px;
+	}
+	
+	#bp-sliding-login-panel.bsl-anon .content .bp-sliding-login-left.bsl-register,
+	#bp-sliding-login-panel.bsl-anon .content .bp-sliding-login-left.bsl-login-form,
+	#bp-sliding-login-panel.bsl-anon .content .bp-sliding-login-left.bsl-forgot
+	{
+		width: 33%;
+	}
+	
+}
+
+@media all and (max-width: 680px) {
+	
+	#bp-sliding-login-panel.bsl-anon
+	{
+		height: 430px;
+	}
+	
+	#bp-sliding-login-panel.bsl-anon .content
+	{
+		width: 100%;
+	}
+	
+	#bp-sliding-login-panel.bsl-anon .content .bp-sliding-login-left.bsl-header,
+	#bp-sliding-login-panel.bsl-anon .content .bp-sliding-login-left.bsl-register,
+	#bp-sliding-login-panel.bsl-anon .content .bp-sliding-login-left.bsl-login-form,
+	#bp-sliding-login-panel.bsl-anon .content .bp-sliding-login-left.bsl-forgot
+	{
+		width: 50%;
+	}
+	
+	#bp-sliding-login-panel.bsl-anon .content .bp-sliding-login-left.bsl-header
+	{
+		height: auto;
+		min-height: 0;
+		margin-bottom: 10px;
+		border: none;
+		border-right: 1px solid #333;
+	}
+	
+	#bp-sliding-login-panel.bsl-anon .content .bp-sliding-login-left.bsl-register
+	{
+		clear: none;
+		min-height: 0;
+		margin-bottom: 10px;
+		border: none;
+	}
+	
+	#bp-sliding-login-panel.bsl-anon .content .bp-sliding-login-left.bsl-login-form
+	{
+		clear: left;
+	}
+	
+}
+
+@media all and (max-width: 480px) {
+	
+	/* anon */
+	#bp-sliding-login-panel.bsl-anon .content
+	{
+		padding-top: 0;
+	}
+	
+	#bp-sliding-login-panel.bsl-anon .content .bp-sliding-login-left.bsl-header
+	{
+		float: none;
+		width: auto;
+		border-bottom: 1px solid #333;
+	}
+	
+	#bp-sliding-login-panel.bsl-anon .content .bp-sliding-login-left.bsl-register,
+	#bp-sliding-login-panel.bsl-anon .content .bp-sliding-login-left.bsl-login-form,
+	#bp-sliding-login-panel.bsl-anon .content .bp-sliding-login-left.bsl-forgot
+	{
+		float: none;
+		clear: left;
+		width: auto;
+		min-height: 0;
+		margin-bottom: 15px;
+		border-bottom: 1px solid #333;
+	}
+	
+	#bp-sliding-login-panel.bsl-anon .content .bp-sliding-login-left.bsl-login-form
+	{
+		padding-bottom: 10px;
+	}
+	
+	#bp-sliding-login-panel.bsl-anon .content .bp-sliding-login-left.bsl-forgot
+	{
+		padding-top: 0;
+		border: none;
+	}
+	
+	/* ------------------------------------------------------------ */
+	
+	/* logged-in */
+
+}
+
+
 
 /* CBOX theme fixes */
 .post-content
@@ -619,6 +775,11 @@ ul.eo-events.eo-events-shortcode > li > strong
 	font-size: 1em;
 }
 
+body.post-type-archive-event #content
+{
+	padding: 40px;
+}
+
 /* Sliding Login Panel */
 .bp-sliding-login-tab ul.bp-sliding-login-login
 {
@@ -667,4 +828,55 @@ ul.eo-events.eo-events-shortcode > li > strong
 	border: none;
 }
 
+span.post-comments
+{
+	width: 120px;
+}
+
+.entry.clearfix p
+{
+	font-size: 1.2em;
+	line-height: 1.5;
+}
+
+#content #comments,
+#content #respond
+{
+	padding: 0 30px 0 30px;
+}
+
+address, em
+{
+	font-family: "MuseoSans500Italic";
+}
+
+body.theme-option .footer-wrap
+{
+	border: none;
+	background: #b7c73b; /* lime green */
+	background: #1c9071; /* dark green */
+	background: #82194e; /* purple */
+	background: #3d9e98; /* turquoise */
+	background: #dd981f; /* orange */
+	background: #70734f /* green-brown */
+}
+
+.footer-wrap #footer .widget h4
+{
+	border-bottom: 1px solid #ccc;
+}
+
+.footer-wrap #footer #powered-by
+{
+	border-top: 1px solid #ccc;
+}
+
+@media only screen and (max-width: 768px) {
+
+	body.theme-option #wrapper .top-wrap #header
+	{
+		background-position: 200px 20px;
+	}
+	
+}
 

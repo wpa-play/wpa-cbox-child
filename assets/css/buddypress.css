@@ -301,8 +301,13 @@ div.pagination .pagination-links {
 div.pagination .pagination-links span, div.pagination .pagination-links a {
     padding: 0 5px;
 }
-div.pagination .pagination-links a:hover { font-weight: bold }
-div#pag-bottom { margin-top: 0 }
+div.pagination .pagination-links a,
+div.pagination .pagination-links a:hover 
+{ font-weight: bold }
+div#pag-bottom { 
+	margin: 15px -30px 0 -30px;
+	padding: 0px 10px;
+}
 div.item-options {
     color: #73C1E6;
     font-size: 80%;
@@ -1043,6 +1048,37 @@ body.home-page #toplevel-groups-list.item-list div.item
 #groups-dir-list.tree #groups-list > li {display: block;}
 /* End hide from IE-mac */
 
+#content #groups-list .item-title a 
+{ 
+	font-size: 170%;
+	font-family: "MuseoSlab500";
+	color: #82194e;
+}
+
+#content #groups-list > li
+{
+	background-color: #FAFAFA; /* for IE */
+	background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: -moz-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: -o-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: -ms-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+	text-shadow: 0 1px 0 #FFFFFF;
+	border: 0px;
+}
+
+#content #groups-list .subitem
+{
+	border: none;
+	padding: 20px;
+	margin: 0;
+	clear: left;
+}
+
+
+
 
 
 /* > WPA Single Group Homepage
@@ -1125,6 +1161,74 @@ body.groups #item-header a.group-subscription-close:hover
 
 
 
+/* > WPA Single Group Members Page
+--------------------------------------------------------------*/
+.groups #item-body
+{
+	margin: 0;
+	padding: 20px 0;
+}
+
+.groups.group-admin #item-body,
+.groups.group-members #item-body
+{
+	padding: 0;
+}
+
+.groups.group-admin #item-body form.standard-form
+{
+	margin: 30px 0;
+}
+
+.group-members #member-list
+{
+	margin: 0;
+}
+
+.group-admin.manage-members #admins-list > li,
+.group-admin.manage-members #mods-list > li,
+.group-admin.manage-members #members-list > li,
+.group-members #member-list > li
+{
+	background-color: #FAFAFA; /* for IE */
+	background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: -moz-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: -o-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: -ms-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+	text-shadow: 0 1px 0 #FFFFFF;
+	border: 0px;
+}
+
+.group-admin.manage-members .bp-widget h4
+{
+	font-size: 1.6em;
+	margin-top: 30px;
+}
+
+.group-admin.manage-members .item-list h5,
+.group-members #member-list h5
+{
+	font-size: 1.3em;
+	line-height: 1;
+}
+
+.group-admin.manage-members .item-list h5,
+.group-members #member-list h5
+{
+	font-size: 1.3em;
+	line-height: 1;
+}
+
+.group-admin.manage-members .item-list a.button
+{
+	margin-top: 0;
+}
+
+
+
 /* > WPA Single Group Announcements Page
 --------------------------------------------------------------*/
 .announcements #item-body form#whats-new-form 
@@ -1135,6 +1239,22 @@ body.groups #item-header a.group-subscription-close:hover
     border: none;
 }
 
+
+/* > WPA User Homepage
+--------------------------------------------------------------*/
+body.bp-user #item-header
+{
+	margin: -30px -30px 0 -30px;
+	padding: 30px 30px 10px 30px;
+	background: #b7c73b;
+}
+
+body.bp-user #item-header,
+body.bp-user #item-header a,
+body.bp-user #item-header a:hover
+{
+	color: #fff;
+}
 
 /* > Invite Anyone Fixes
 --------------------------------------------------------------*/
@@ -1211,7 +1331,8 @@ ul#friend-list
 	margin: 30px 30px 30px 0;
 }
 
-.single-item #content .group-subscription-options
+.single-item #content .group-subscription-options,
+#content #groups-dir-list .group-subscription-options
 {
 	width: 380px;
 	padding-bottom: 6px;

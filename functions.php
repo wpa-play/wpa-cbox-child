@@ -272,3 +272,81 @@ function wpa_cbox_add_rewrite_rule(){
 }
 
 add_action( 'init', 'wpa_cbox_add_rewrite_rule', 11 );
+
+
+
+/**
+ * Add our login box to the sliding header
+ */
+function wpa_cbox_add_login_form(){
+	
+	?>
+	
+	<div class="bp-sliding-login-left bsl-login-form">
+
+		<div id="wp-fb-login-widget">
+
+			<?php
+		
+			// only on server
+			if ( $_SERVER['HTTP_HOST'] == 'dev.wpa-play.com' ) {
+		
+				// target AutoConnect Premium
+				$widget = 'Widget_AutoConnect_Premium';
+		
+				// set up instance
+				$instance = array( 
+					"title" => "Login",
+					"labelUserName" => "Username",
+					"labelPass" => "Password",
+					"labelBtn" => "Login", 
+					"labelRemember" => "Remember me",
+					"labelForgot" => "Forgot?",
+					"labelLogout" => "Logout",
+					"labelProfile" => "Edit Profile",
+					"labelWelcome" => "Welcome,",
+					"showwplogin" => true,
+					"showrememberme" => false,
+					"showregister" => true,
+					"logoutofFB" => false,
+					"showavatar" => false,
+					"showEditProfile" => true,
+					"bpProfileLink" => true,
+					"avatarsize" => 35
+				);
+		
+				// args?
+				$args = array();
+		
+				// show widget
+				the_widget( $widget, $instance, $args );
+		
+			}
+		
+			?>
+
+		</div><!-- /#wp-fb-login-widget -->
+	
+	</div><!-- /.left.bsl-login-form -->
+	
+	<?php
+	
+}
+
+add_action( 'bp_sliding_login_panel_anon_after_register', 'wpa_cbox_add_login_form' );
+
+
+
+/**
+ * Add our logo to the sliding header
+ */
+function wpa_cbox_add_logo_to_panel(){
+	
+	return get_stylesheet_directory_uri().'/assets/images/wpa-logo-panel.png';
+	
+}
+
+add_action( 'bp_sliding_login_logo', 'wpa_cbox_add_logo_to_panel' );
+
+
+
