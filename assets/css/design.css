@@ -86,6 +86,17 @@ text-decoration: underline;
 #header:before {
 	border-radius: 5px 5px 0px 0px;
 }
+
+body.theme-option .top-wrap #header
+{
+	background: #3d9e98; /* turquoise */
+}
+
+body.theme-option #sidebar
+{
+	background: #dd981f; /* orange */
+}
+
 h1#site-title,div#site-title {
 	border-bottom: 2px solid #DDDDDD;
 	border-radius: 0 12px 12px 0;
@@ -178,6 +189,11 @@ h1#site-title,div#site-title {
 	font-weight: bold;
 	background: #82194e;
 	background: #333;
+}
+
+.top-wrap #sub-menu-wrap .base-menu.sub-menu
+{
+	background: #b7c73b; /* lime green */
 }
 
 .widget h4,#vertical-activity-tabs h4 {

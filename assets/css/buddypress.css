@@ -1170,6 +1170,7 @@ body.groups #item-header a.group-subscription-close:hover
 }
 
 .groups.group-admin #item-body,
+.groups.group-home #item-body,
 .groups.group-members #item-body
 {
 	padding: 0;
