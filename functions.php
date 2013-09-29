@@ -350,3 +350,19 @@ add_action( 'bp_sliding_login_logo', 'wpa_cbox_add_logo_to_panel' );
 
 
 
+/**
+ * Add our CiviCRM data to the event
+ */
+function wpa_cbox_get_event_meta_list(){
+	
+	$post_id = (int) ( empty($post_id) ? get_the_ID() : $post_id);
+
+	if( empty($post_id) ) 
+		return;
+
+	echo '<p>Event CiviCRM data</p>';
+	
+}
+
+
+
