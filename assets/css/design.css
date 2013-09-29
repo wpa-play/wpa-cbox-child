@@ -192,11 +192,6 @@ h1#site-title,div#site-title {
 	background: #333;
 }
 
-.top-wrap #sub-menu-wrap .base-menu.sub-menu
-{
-	background: #b7c73b; /* lime green */
-}
-
 .widget h4,#vertical-activity-tabs h4 {
 	border-bottom: 1px solid #EDEDED;
 }
@@ -754,11 +749,60 @@ body#infinity-base.registration .icext-feature.icext-bp-fb-autoconnect
 	line-height: 1.5;
 }
 
+h2.page-title, h2.post-title, h1.page-title, h1.post-title
+{
+	font-size: 2.4em;
+}
+
+
+
+/* blogs list */
+body.directory.blogs.theme-option #content
+{
+	padding-bottom: 0;
+}
+
+#blogs-list
+{
+	margin: 0;
+}
+
+#blogs-list > li
+{
+	background-color: #FAFAFA; /* for IE */
+	background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: -moz-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: -o-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: -ms-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+}
+
+ul#blogs-list.item-list li:last-child
+{
+	border-bottom: 1px solid #eee;
+}
+
+
+
+.event-entry-meta
+{
+	padding-top: 8px;
+}
+
+.event-entry-meta time
+{
+	font-family: "MuseoSans500";
+}
+
+
+
 /* Fix for Google Maps */
 .eo-venue-map img
 {
 	max-width: none;
 }
+
+
 
 /* fix for calendar display */
 div.eo-fullcalendar, 
@@ -767,6 +811,27 @@ div.eo-fullcalendar *
 	box-sizing: content-box;
 	-moz-box-sizing: content-box;
 	-webkit-box-sizing: content-box;
+}
+
+div.eo-fullcalendar.ui-widget
+{
+	font-family: "MuseoSans300";
+}
+
+.fc-header-title h2
+{
+	font-size: 2em;
+	margin-bottom: 0.4em;
+}
+
+table.fc-header
+{
+	margin: 0;
+}
+
+table.fc-header td
+{
+	border: none;
 }
 
 .archive .event.type-event
@@ -791,6 +856,7 @@ div.eo-fullcalendar *
 .post-type-archive-event .page-header h1.page-title
 {
 	color: #fff;
+	font-size: 2.4em;
 }
 
 .nav-next.events-nav-newer
@@ -861,6 +927,7 @@ body.single-event #content .event
 body.single-event #content .event .eo-event-meta
 {
 	padding: 0 !important;
+	margin-top: 0;
 }
 
 body.single-event #content .event h1.post-title
@@ -869,6 +936,7 @@ body.single-event #content .event h1.post-title
 	padding: 40px 40px 0 40px !important;
 	background: #b7c73b;
 	color: #fff;
+	font-size: 2.4em;
 }
 
 body.single-event #content .event .eo-entry-meta-title
@@ -889,7 +957,7 @@ body.single-event #content .entry.clearfix
 body.single-event #content .event .eventorganiser-event-meta
 {
 	margin: 0 -50px 40px -50px;
-	padding: 5px 40px 20px 40px !important;
+	padding: 10px 40px 20px 40px !important;
 	background: #b7c73b;
 	color: #fff;
 	border-bottom: 1px solid #ccc;
@@ -924,12 +992,18 @@ body.tax-event-venue #content .page-header .venue-archive-meta
 
 body.tax-event-venue #content .page-header h1.page-title
 {
+	font-size: 2.4em;
 	margin-bottom: 10px;
 }
 
 body.tax-event-venue #content .page-header .venue-archive-meta
 {
 	font-size: 120%;
+}
+
+body.tax-event-venue #content .eo-event-meta
+{
+	padding: 0 !important;
 }
 
 
@@ -948,19 +1022,25 @@ body.tax-event-category #content .page-header
 }
 
 body.tax-event-category #content .page-header h1.page-title,
-body.tax-event-category #content .page-header .venue-archive-meta
+body.tax-event-category #content .page-header .category-archive-meta
 {
 	color: #fff;
 }
 
 body.tax-event-category #content .page-header h1.page-title
 {
+	font-size: 2.4em;
 	margin-bottom: 10px;
 }
 
-body.tax-event-category #content .page-header .venue-archive-meta
+body.tax-event-category #content .page-header .category-archive-meta
 {
 	font-size: 120%;
+}
+
+body.tax-event-category #content .event .eo-event-meta
+{
+	padding: 0 !important;
 }
 
 

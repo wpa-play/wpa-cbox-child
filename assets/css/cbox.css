@@ -64,10 +64,8 @@ h1#site-title,div#site-title {
 .base-menu .sub-menu { padding: 0 !important }
 .main-menu .sub-menu { padding: 0 !important }
 .top-wrap .base-menu.sub-menu 
-{ 
+{
 	border-top: 0;
-	background-color: #82194e;
-	background-image: none;
 }
 
 .top-wrap #sub-menu-wrap
@@ -75,7 +73,18 @@ h1#site-title,div#site-title {
 	margin-bottom: -6px;
 }
 
-.top-wrap .sub-menu,
+.top-wrap .sub-menu
+{
+	background-image: none;
+	border: none;
+}
+
+.top-wrap #main-menu-wrap .sub-menu
+{
+	background-color: #82194e;
+	background-image: none;
+}
+
 .base-menu ul ul
 {
 	background-color: #82194e;
