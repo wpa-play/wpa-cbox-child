@@ -89,12 +89,12 @@ text-decoration: underline;
 
 body.theme-option .top-wrap #header
 {
-	background: #3d9e98; /* turquoise */
+	background-color: #3d9e98; /* turquoise */
 }
 
 body.theme-option #sidebar
 {
-	background: #dd981f; /* orange */
+	background-color: #dd981f; /* orange */
 }
 
 h1#site-title,div#site-title {
