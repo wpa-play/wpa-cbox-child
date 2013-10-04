@@ -5,11 +5,11 @@
 
 	infinity_get_header();
 ?>
-	<div id="content" role="main" class="<?php do_action( 'content_class' ); ?>">
+	<div id="content-full" class="grid_24" role="main">
 		<?php
 			do_action( 'open_content' );
 			do_action( 'open_page' );
-		?>	
+		?>
 		<?php
 			
 			// bust transient cache
@@ -24,6 +24,5 @@
 	</div>
 
 <?php
-	infinity_get_sidebar();
 	infinity_get_footer();
 ?>
