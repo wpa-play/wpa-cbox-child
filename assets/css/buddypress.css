@@ -6,6 +6,8 @@ You can disable the css in this file by adding the following code to your child 
 
 infinity-bp-support = off
 --------------------------------------------------------------*/
+
+
 /* ============================== */
 /* BuddyPress Infinity Tweaks  */
 /* ============================== */
@@ -31,6 +33,8 @@ span.activity {
     font-size: 85%;
 }
 .activity-read-more { margin-left: 5px }
+
+
 
 /* > Item Headers (Profiles, Groups)
 --------------------------------------------------------------*/
@@ -119,6 +123,9 @@ div#item-header div.generic-button, div#item-header a.button {
 }
 div#item-header div#message.info { line-height: 80% }
 div#item-header div#message.info p { background: #F9F9F9 }
+
+
+
 /* > Item Lists (Activity, Friend, Group lists)
 --------------------------------------------------------------*/
 ul.item-list {
@@ -170,6 +177,9 @@ ul.item-list li h5 span.small {
     font-weight: normal;
     font-size: 85%;
 }
+
+
+
 /* > Item Tabs
 --------------------------------------------------------------*/
 div.item-list-tabs {
@@ -255,9 +265,15 @@ div#subnav.item-list-tabs {
     margin-bottom: 20px;
     overflow: hidden;
 }
+
+
+
 /* > Item Body
 --------------------------------------------------------------*/
 .item-body { margin: 20px 0 }
+
+
+
 /* > Directories (Members, Groups, Blogs, Forums)
 --------------------------------------------------------------*/
 div.dir-search {
@@ -286,6 +302,9 @@ div.dir-search label { display: inline-block }
     float: left;
     margin-top: 10px;
 }
+
+
+
 /* > Pagination
 --------------------------------------------------------------*/
 div.pagination#user-pag, .friends div.pagination, .mygroups div.pagination, .myblogs div.pagination, noscript div.pagination {
@@ -301,8 +320,13 @@ div.pagination .pagination-links {
 div.pagination .pagination-links span, div.pagination .pagination-links a {
     padding: 0 5px;
 }
-div.pagination .pagination-links a:hover { font-weight: bold }
-div#pag-bottom { margin-top: 0 }
+div.pagination .pagination-links a,
+div.pagination .pagination-links a:hover 
+{ font-weight: bold }
+div#pag-bottom { 
+	margin: 15px -30px 0 -30px;
+	padding: 0px 10px;
+}
 div.item-options {
     color: #73C1E6;
     font-size: 80%;
@@ -319,6 +343,9 @@ div.item-avatar img {
     margin: 5px 5px 5px 0;
 }
 .avatar-block { overflow: hidden }
+
+
+
 /* > Error / Success Messages
 --------------------------------------------------------------*/
 div#message { margin: 15px 0 }
@@ -362,6 +389,9 @@ ul.button-nav li.current a {
     border-radius: 3px 3px 3px 3px;
     margin-bottom: 20px;
 }
+
+
+
 /* > AJAX Loaders
 --------------------------------------------------------------*/
 .ajax-loader {
@@ -377,6 +407,9 @@ a.loading, li.loading a,#object-nav a.loading, #object-nav li.loading {
     background-repeat: no-repeat !important;
     padding-left: 25px !important;
 }
+
+
+
 /* > Input Forms
 --------------------------------------------------------------*/
 form.standard-form #basic-details-section input[type=password], form.standard-form #blog-details-section input#signup_blog_url { width: 35% }
@@ -440,6 +473,9 @@ div#invite-list {
 	padding: 3px 8px;
 	font-size: 75%;
 }
+
+
+
 /* > Data Tables
 --------------------------------------------------------------*/
 .profile-fields {
@@ -505,6 +541,9 @@ table.forum th#th-freshness {
     width: 10%;
     text-align: center;
 }
+
+
+
 /* > Activity Stream Posting
 --------------------------------------------------------------*/
 #item-body form#whats-new-form {
@@ -548,6 +587,9 @@ form#whats-new-form #whats-new-submit {
     height: 0;
     overflow: hidden;
 }
+
+
+
 /* > Activity Stream Listing
 --------------------------------------------------------------*/
 ul.activity-list li {
@@ -705,6 +747,9 @@ body.activity-permalink .activity-content .activity-inner, body.activity-permali
     min-height: 40px;
 }
 .activity-list li.load-more a { color: #555 }
+
+
+
 /* > Activity Stream Comments
 --------------------------------------------------------------*/
 .activity-permalink div.activity {
@@ -834,6 +879,9 @@ div.activity-comments form div.ac-reply-content {
     color: #888;
     font-size: 85%;
 }
+
+
+
 /* > Private Message Threads
 --------------------------------------------------------------*/
 table#message-threads {
@@ -912,6 +960,9 @@ div#message-thread div.message-metadata { overflow: hidden }
 div#message-thread div.message-content { margin-left: 55px }
 div#message-thread div.message-options { text-align: right }
 #message-threads .thread-avatar {width: 8%;}
+
+
+
 /* > Group Forum Topics
 --------------------------------------------------------------*/
 ul#topic-post-list {
@@ -956,6 +1007,67 @@ div#new-topic-post {
 
 
 
+/* > WPA Members Directory
+--------------------------------------------------------------*/
+
+body.directory.members.theme-option #content
+{
+	padding-bottom: 0;
+}
+
+body.directory.members.theme-option #content #members-list .item-title a 
+{ 
+	font-size: 170%;
+	font-family: "MuseoSlab500";
+	color: #82194e;
+}
+
+body.directory.members.theme-option #content #members-list
+{
+	margin: 0;
+}
+
+body.directory.members.theme-option #content #members-list > li
+{
+	background-color: #FAFAFA; /* for IE */
+	background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: -moz-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: -o-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: -ms-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	border-bottom: 1px solid #eee;
+}
+
+
+
+/* > Supplied Homepage Members Widget
+--------------------------------------------------------------*/
+.widget_bp_core_members_widget ul#members-list
+{
+	margin: 0;
+}
+
+.widget_bp_core_members_widget ul#members-list > li
+{
+	padding: 15px;
+}
+
+
+
+/* > Supplied Homepage Groups Widget
+--------------------------------------------------------------*/
+.widget_bp_groups_widget ul#groups-list
+{
+	margin: 0;
+}
+
+.widget_bp_groups_widget ul#groups-list > li
+{
+	padding: 15px;
+}
+
+
+
 /* > WPA Groups Directory
 --------------------------------------------------------------*/
 #pag-top
@@ -964,23 +1076,23 @@ div#new-topic-post {
 	padding: 0px 10px;
 }
 
-ul#groups-list
+body.groups ul#groups-list
 {
 	margin: 0;
 }
 
-#content ul#groups-list.item-list > li
+body.groups #content ul#groups-list.item-list > li
 {
 	clear: left;
 }
 
-#content ul#groups-list.item-list div.item-avatar
+body.groups #content ul#groups-list.item-list div.item-avatar
 {
 	width: 160px;
 	height: 160px;
 }
 
-#content ul#groups-list.item-list li img.avatar
+body.groups #content ul#groups-list.item-list li img.avatar
 {
 	width: 150px;
 	height: 150px;
@@ -1029,19 +1141,55 @@ body.home-page #toplevel-groups-list.item-list div.item
 /* > WPA Groups Directory
 --------------------------------------------------------------*/
 
+body.directory.groups.theme-option #content
+{
+	padding-bottom: 0;
+}
+
 /* simulate clearfix */
-#groups-dir-list.tree #groups-list > li:after {
+body.groups #groups-dir-list.tree #groups-list > li:after {
 	content: ".";
 	display: block;
 	height: 0;
 	clear: both;
 	visibility: hidden;
 }
-#groups-dir-list.tree #groups-list > li {display: inline-block;}
+body.groups #groups-dir-list.tree #groups-list > li {display: inline-block;}
 /* Hides from IE-mac \*/
 * html #groups-dir-list.tree #groups-list > li {height: 1%;}
-#groups-dir-list.tree #groups-list > li {display: block;}
+body.groups #groups-dir-list.tree #groups-list > li {display: block;}
 /* End hide from IE-mac */
+
+body.groups #content #groups-list .item-title a 
+{ 
+	font-size: 170%;
+	font-family: "MuseoSlab500";
+	color: #82194e;
+}
+
+body.groups #content #groups-list > li
+{
+	background-color: #FAFAFA; /* for IE */
+	background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: -moz-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: -o-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: -ms-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+	text-shadow: 0 1px 0 #FFFFFF;
+	border: 0px;
+}
+
+body.groups #content #groups-list .subitem
+{
+	border: none;
+	padding: 20px;
+	margin: 0;
+	clear: left;
+}
+
+
 
 
 
@@ -1125,6 +1273,75 @@ body.groups #item-header a.group-subscription-close:hover
 
 
 
+/* > WPA Single Group Members Page
+--------------------------------------------------------------*/
+.groups #item-body
+{
+	margin: 0;
+	padding: 20px 0;
+}
+
+.groups.group-admin #item-body,
+.groups.group-home #item-body,
+.groups.group-members #item-body
+{
+	padding: 0;
+}
+
+.groups.group-admin #item-body form.standard-form
+{
+	margin: 30px 0;
+}
+
+.group-members #member-list
+{
+	margin: 0;
+}
+
+.group-admin.manage-members #admins-list > li,
+.group-admin.manage-members #mods-list > li,
+.group-admin.manage-members #members-list > li,
+.group-members #member-list > li
+{
+	background-color: #FAFAFA; /* for IE */
+	background-image: -webkit-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: -moz-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: -o-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: -ms-linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	background-image: linear-gradient(top, #FFFFFF 0%, #F4F4F4 100%);
+	-webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+	text-shadow: 0 1px 0 #FFFFFF;
+	border: 0px;
+}
+
+.group-admin.manage-members .bp-widget h4
+{
+	font-size: 1.6em;
+	margin-top: 30px;
+}
+
+.group-admin.manage-members .item-list h5,
+.group-members #member-list h5
+{
+	font-size: 1.3em;
+	line-height: 1;
+}
+
+.group-admin.manage-members .item-list h5,
+.group-members #member-list h5
+{
+	font-size: 1.3em;
+	line-height: 1;
+}
+
+.group-admin.manage-members .item-list a.button
+{
+	margin-top: 0;
+}
+
+
+
 /* > WPA Single Group Announcements Page
 --------------------------------------------------------------*/
 .announcements #item-body form#whats-new-form 
@@ -1135,6 +1352,22 @@ body.groups #item-header a.group-subscription-close:hover
     border: none;
 }
 
+
+/* > WPA User Homepage
+--------------------------------------------------------------*/
+body.bp-user #item-header
+{
+	margin: -30px -30px 0 -30px;
+	padding: 30px 30px 10px 30px;
+	background: #b7c73b;
+}
+
+body.bp-user #item-header,
+body.bp-user #item-header a,
+body.bp-user #item-header a:hover
+{
+	color: #fff;
+}
 
 /* > Invite Anyone Fixes
 --------------------------------------------------------------*/
@@ -1211,7 +1444,8 @@ ul#friend-list
 	margin: 30px 30px 30px 0;
 }
 
-.single-item #content .group-subscription-options
+.single-item #content .group-subscription-options,
+#content #groups-dir-list .group-subscription-options
 {
 	width: 380px;
 	padding-bottom: 6px;

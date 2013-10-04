@@ -45,46 +45,6 @@
 				do_action( 'close_header' );
 			?>
 		</div>
-		<div id="wp-fb-login-widget">
-			<?php
-			
-			// only on server
-			if ( $_SERVER['HTTP_HOST'] == 'dev.wpa-play.com' ) {
-			
-				// target AutoConnect Premium
-				$widget = 'Widget_AutoConnect_Premium';
-			
-				// set up instance
-				$instance = array( 
-					"title" => "",
-					"labelUserName" => "Username",
-					"labelPass" => "Password",
-					"labelBtn" => "Login", 
-					"labelRemember" => "Remember me",
-					"labelForgot" => "Forgot?",
-					"labelLogout" => "Logout",
-					"labelProfile" => "Edit Profile",
-					"labelWelcome" => "Welcome,",
-					"showwplogin" => true,
-					"showrememberme" => false,
-					"showregister" => true,
-					"logoutofFB" => false,
-					"showavatar" => false,
-					"showEditProfile" => true,
-					"bpProfileLink" => true,
-					"avatarsize" => 35
-				);
-			
-				// args?
-				$args = array();
-			
-				// show widget
-				the_widget( $widget, $instance, $args );
-			
-			}
-			
-			?>
-		</div>
 	</header><!-- end header -->
 	<?php
 		// Load Sub Menu only if it's enabled
